@@ -49,7 +49,7 @@ public class RentCarUseCaseTests
         var days = 5;
 
         var customer = Customer.Create(customerId, "Juan Pérez");
-        var car = Car.Create(carId, "Toyota Camry", CarType.Small, 50.00m);
+        var car = Car.Create(carId, "Toyota Camry", CarType.Small);
 
         _customerRepositoryMock.Setup(r => r.GetByIdAsync(customerId, It.IsAny<CancellationToken>()))
             .ReturnsAsync(customer);

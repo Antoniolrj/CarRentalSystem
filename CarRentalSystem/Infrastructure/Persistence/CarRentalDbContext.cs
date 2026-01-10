@@ -41,10 +41,6 @@ public class CarRentalDbContext : DbContext
             .Property(c => c.Type)
             .HasConversion<int>();
 
-        modelBuilder.Entity<Car>()
-            .Property(c => c.DailyPrice)
-            .HasPrecision(10, 2);
-
         // Configurar tabla Customers
         modelBuilder.Entity<Customer>()
             .HasKey(c => c.Id);

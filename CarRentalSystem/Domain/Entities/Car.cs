@@ -20,33 +20,29 @@ public sealed class Car
     public string Model { get; init; }
     public CarType Type { get; init; }
     public bool IsAvailable { get; private set; }
-    public decimal DailyPrice { get; init; }
 
     // Constructor privado sin parámetros para EF Core
     private Car() { }
 
-    private Car(string id, string model, CarType type, decimal dailyPrice, bool isAvailable)
+    private Car(string id, string model, CarType type, bool isAvailable)
     {
         if (string.IsNullOrWhiteSpace(id))
             throw new ArgumentException("El ID del auto no puede estar vacío.", nameof(id));
         if (string.IsNullOrWhiteSpace(model))
             throw new ArgumentException("El modelo del auto no puede estar vacío.", nameof(model));
-        if (dailyPrice < 0)
-            throw new ArgumentException("El precio diario no puede ser negativo.", nameof(dailyPrice));
 
         Id = id;
         Model = model;
         Type = type;
-        DailyPrice = dailyPrice;
         IsAvailable = isAvailable;
     }
 
     /// <summary>
     /// Factory method para crear un nuevo auto.
     /// </summary>
-    public static Car Create(string id, string model, CarType type, decimal dailyPrice)
+    public static Car Create(string id, string model, CarType type)
     {
-        return new Car(id, model, type, dailyPrice, isAvailable: true);
+        return new Car(id, model, type, isAvailable: true);
     }
 
     /// <summary>

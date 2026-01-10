@@ -32,9 +32,9 @@ public class GetCarsUseCaseTests
     {
         var cars = new List<Car>
         {
-            Car.Create("1", "Toyota Camry", CarType.Small, 50.00m),
-            Car.Create("2", "Honda CR-V", CarType.SUV, 75.00m),
-            Car.Create("3", "BMW 7", CarType.Premium, 150.00m)
+            Car.Create("1", "Toyota Camry", CarType.Small),
+            Car.Create("2", "Honda CR-V", CarType.SUV),
+            Car.Create("3", "BMW 7", CarType.Premium)
         };
 
         _carRepositoryMock.Setup(r => r.GetAllAsync(It.IsAny<CancellationToken>()))

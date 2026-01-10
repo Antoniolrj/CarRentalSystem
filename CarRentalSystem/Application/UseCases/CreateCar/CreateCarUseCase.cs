@@ -24,7 +24,7 @@ public class CreateCarUseCase : ICreateCarUseCase
     {
         string carId = Guid.NewGuid().ToString();
 
-        var car = Car.Create(carId, request.Model, request.GetCarType(), request.DailyPrice);
+        var car = Car.Create(carId, request.Model, request.GetCarType());
 
         await _carRepository.AddAsync(car, cancellationToken);
 

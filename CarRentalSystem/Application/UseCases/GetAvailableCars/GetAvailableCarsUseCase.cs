@@ -27,8 +27,7 @@ public class GetAvailableCarsUseCase : IGetAvailableCarsUseCase
             Id: c.Id,
             Model: c.Model,
             Type: c.Type.ToString(),
-            IsAvailable: c.IsAvailable,
-            DailyPrice: c.DailyPrice
+            IsAvailable: c.IsAvailable
         )).ToList();
     }
 }

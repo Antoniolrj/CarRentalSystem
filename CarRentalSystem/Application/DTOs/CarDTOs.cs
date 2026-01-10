@@ -14,10 +14,7 @@ public sealed record CreateCarRequest(
 
     [Required(ErrorMessage = "El tipo de auto es requerido")]
     [EnumDataType(typeof(CarType), ErrorMessage = "El tipo de auto no es válido")]
-    string Type,
-
-    [Range(0.01, 9999999.99, ErrorMessage = "El precio diario debe ser mayor a 0")]
-    decimal DailyPrice)
+    string Type)
 {
     public CarType GetCarType() => Enum.Parse<CarType>(Type);
 }
@@ -29,7 +26,6 @@ public sealed record CreateCarResponse(
     string Id,
     string Model,
     string Type,
-    decimal DailyPrice,
     bool IsAvailable);
 
 /// <summary>
@@ -44,7 +40,6 @@ public static class CarDtoExtensions
             car.Id,
             car.Model,
             car.Type.ToString(),
-            car.DailyPrice,
             car.IsAvailable);
     }
 }

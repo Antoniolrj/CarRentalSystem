@@ -32,8 +32,7 @@ public class CreateCarUseCaseTests
         // Arrange
         var request = new CreateCarRequest(
             Model: "Toyota Camry",
-            Type: "Small",
-            DailyPrice: 50.00m
+            Type: "Small"
         );
 
         var result = await _useCase.ExecuteAsync(request);
@@ -42,7 +41,6 @@ public class CreateCarUseCaseTests
         result.Data.Should().NotBeNull();
         result.Data!.Model.Should().Be("Toyota Camry");
         result.Data!.Type.Should().Be("Small");
-        result.Data!.DailyPrice.Should().Be(50.00m);
         result.Data!.IsAvailable.Should().BeTrue();
 
         _carRepositoryMock.Verify(
@@ -55,14 +53,12 @@ public class CreateCarUseCaseTests
     {
         var request1 = new CreateCarRequest(
             Model: "Honda CR-V",
-            Type: "SUV",
-            DailyPrice: 75.00m
+            Type: "SUV"
         );
 
         var request2 = new CreateCarRequest(
             Model: "Honda CR-V",
-            Type: "Premium",
-            DailyPrice: 75.00m
+            Type: "Premium"
         );
 
         var result1 = await _useCase.ExecuteAsync(request1);
@@ -78,8 +74,7 @@ public class CreateCarUseCaseTests
     {
         var request = new CreateCarRequest(
             Model: "BMW 7 Series",
-            Type: "Premium",
-            DailyPrice: 150.00m
+            Type: "Premium"
         );
 
         var result = await _useCase.ExecuteAsync(request);

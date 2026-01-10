@@ -34,3 +34,4 @@
 /Users/antoniolrj/Proyectos/CarRentalSystem/CarRentalSystem/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.dll
 /Users/antoniolrj/Proyectos/CarRentalSystem/CarRentalSystem/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
 /Users/antoniolrj/Proyectos/CarRentalSystem/CarRentalSystem/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll
+/Users/antoniolrj/Proyectos/CarRentalSystem/CarRentalSystem/obj/Debug/net8.0/CarRentalSystem.sourcelink.json

@@ -117,3 +117,4 @@
 /Users/antoniolrj/Proyectos/CarRentalSystem/CarRentalSystem.Tests/obj/Debug/net8.0/CarRentalSystem.Tests.pdb
 /Users/antoniolrj/Proyectos/CarRentalSystem/CarRentalSystem.Tests/obj/Debug/net8.0/CarRentalSystem.Tests.genruntimeconfig.cache
 /Users/antoniolrj/Proyectos/CarRentalSystem/CarRentalSystem.Tests/obj/Debug/net8.0/ref/CarRentalSystem.Tests.dll
+/Users/antoniolrj/Proyectos/CarRentalSystem/CarRentalSystem.Tests/obj/Debug/net8.0/CarRentalSystem.Tests.sourcelink.json

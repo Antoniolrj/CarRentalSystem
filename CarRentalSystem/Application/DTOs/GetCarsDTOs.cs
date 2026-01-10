@@ -7,5 +7,4 @@ public sealed record GetCarsResponse(
     string Id,
     string Model,
     string Type,
-    bool IsAvailable,
-    decimal DailyPrice);
+    bool IsAvailable);

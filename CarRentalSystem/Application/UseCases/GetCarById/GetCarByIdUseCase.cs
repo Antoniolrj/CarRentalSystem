@@ -35,8 +35,7 @@ public class GetCarByIdUseCase : IGetCarByIdUseCase
             Id: car.Id,
             Model: car.Model,
             Type: car.Type.ToString(),
-            IsAvailable: car.IsAvailable,
-            DailyPrice: car.DailyPrice
+            IsAvailable: car.IsAvailable
         );
     }
 }
