@@ -47,7 +47,6 @@ public class RentalController : ControllerBase
 
     /// <summary>
     /// Devuelve un auto y calcula recargos si hay atraso.
-    /// POST /api/rentals/return
     /// </summary>
     [HttpPost("return")]
     [ProducesResponseType(typeof(ReturnCarResponse), StatusCodes.Status200OK)]
@@ -61,7 +60,6 @@ public class RentalController : ControllerBase
 
     /// <summary>
     /// Obtiene los detalles de un alquiler específico.
-    /// GET /api/rentals/{rentalId}
     /// </summary>
     [HttpGet("{rentalId}")]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -73,7 +71,6 @@ public class RentalController : ControllerBase
 
     /// <summary>
     /// Obtiene todos los alquileres de un cliente específico.
-    /// GET /api/rentals/customer/{customerId}
     /// </summary>
     [HttpGet("customer/{customerId}")]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
