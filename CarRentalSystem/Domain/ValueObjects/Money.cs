@@ -10,7 +10,7 @@ public sealed class Money : IEquatable<Money>
     public Money(decimal amount)
     {
         if (amount < 0)
-            throw new ArgumentException("El monto no puede ser negativo.", nameof(amount));
+            throw new ArgumentException("La cantidad no puede ser negativa.", nameof(amount));
 
         Amount = amount;
     }
