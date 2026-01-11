@@ -1,1 +1,100 @@
-/.DS_Store
+## =========================
+## .NET 8 – ASP.NET Core API
+## =========================
+
+# Build outputs
+bin/
+obj/
+[Bb]uild/
+[Dd]ebug*/
+[Rr]elease*/
+publish/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.rsuser
+
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/extensions.json
+
+# Rider / JetBrains
+.idea/
+*.sln.iml
+
+## =========================
+## ASP.NET Core
+## =========================
+
+# Secrets & certificates
+secrets.json
+*.pfx
+*.cer
+*.key
+
+# Logs
+*.log
+logs/
+
+# Kestrel / HTTPS
+https/
+*.pem
+
+## =========================
+## Entity Framework Core
+## =========================
+
+# Migrations (ajusta según tu política)
+Migrations/
+!Migrations/*Initial*.cs
+
+# SQLite / LocalDB
+*.db
+*.db-shm
+*.db-wal
+
+## =========================
+## Tests & Coverage
+## =========================
+
+TestResults/
+*.trx
+coverage/
+coverage.cobertura.xml
+*.coverage
+*.coveragexml
+
+## =========================
+## Docker
+## =========================
+
+.dockerignore
+docker-compose.override.yml
+
+## =========================
+## Environment variables
+## =========================
+
+.env
+.env.*
+
+## =========================
+## OS / Misc
+## =========================
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# Linux
+*~
