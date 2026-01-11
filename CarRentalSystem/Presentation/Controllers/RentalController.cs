@@ -12,7 +12,7 @@ namespace CarRentalSystem.Presentation.Controllers;
 /// Controlador para gestionar alquileres y devoluciones de coches.
 /// </summary>
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/rentals")]
 public class RentalController : ControllerBase
 {
     private readonly IRentCarUseCase _rentCarUseCase;

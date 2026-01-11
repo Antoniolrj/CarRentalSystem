@@ -4,106 +4,85 @@
 # ==========================================
 # VARIABLES DINÁMICAS (se actualizan automáticamente)
 # ==========================================
-@carId = 
-@customerId = customer-001
-@rentalId = 
+@carId = null
+@customerId = null
+@rentalId = null
 
 # ==========================================
 # CAR ENDPOINTS - GESTIÓN DE COCHES
 # ==========================================
 
 ### 1. Crear un nuevo coche - Tipo Small (CAPTURA EL ID)
-POST {{baseUrl}}/api/cars
+# @name createCar
+POST {{baseUrl}}/api/cars/create
 Content-Type: {{contentType}}
 
 {
   "model": "Toyota Camry",
-  "type": "Small",
-  "dailyPrice": 50.00
+  "type": "Small"
 }
-
-@carId = {{$response.body.data.id}}
-
+###
+@carId = {{createCar.response.body.id}}
 ###
 
-### 2. Crear otro coche - Tipo Medium
-POST {{baseUrl}}/api/cars
+### 2. Crear otro coche - Tipo SUV
+POST {{baseUrl}}/api/cars/create
 Content-Type: {{contentType}}
 
 {
   "model": "Honda CR-V",
-  "type": "Medium",
-  "dailyPrice": 75.00
+  "type": "SUV"
 }
-
 ###
 
 ### 3. Crear otro coche - Tipo Premium
-POST {{baseUrl}}/api/cars
+POST {{baseUrl}}/api/cars/create
 Content-Type: {{contentType}}
 
 {
   "model": "BMW 7 Series",
-  "type": "Premium",
-  "dailyPrice": 150.00
+  "type": "Premium"
 }
-
 ###
 
 ### 4. Obtener todos los coches
 GET {{baseUrl}}/api/cars
 Accept: {{contentType}}
+###
 
 ### 5. Obtener un coche por ID
 GET {{baseUrl}}/api/cars/{{carId}}
 Accept: {{contentType}}
-
 ###
 
 ### 6. Obtener coches disponibles
 GET {{baseUrl}}/api/cars/available
 Accept: {{contentType}}
+###
 
 ### 7. Crear coche con modelo vacío (error esperado 400)
-POST {{baseUrl}}/api/cars
+POST {{baseUrl}}/api/cars/create
 Content-Type: {{contentType}}
 
 {
   "model": "",
-  "type": "Small",
-  "dailyPrice": 50.00
+  "type": "Small"
 }
-
-###
-
-### 8. Crear coche con precio negativo (error esperado 400)
-POST {{baseUrl}}/api/cars
-Content-Type: {{contentType}}
-
-{
-  "model": "Test Car",
-  "type": "Small",
-  "dailyPrice": -50.00
-}
-
 ###
 
 ### 9. Crear coche con tipo inválido (error esperado 400)
-POST {{baseUrl}}/api/cars
+POST {{baseUrl}}/api/cars/create
 Content-Type: {{contentType}}
 
 {
   "model": "Test Car",
-  "type": "InvalidType",
-  "dailyPrice": 50.00
+  "type": "InvalidType"
 }
-
 ###
 
 ### 10. Obtener coche inexistente (error esperado 404)
 GET {{baseUrl}}/api/cars/non-existent-id
 Accept: {{contentType}}
-
 ###
 
 # ==========================================
@@ -111,6 +90,7 @@ Accept: {{contentType}}
 # ==========================================
 
 ### 11. Alquilar un coche (CAPTURA EL RENTAL ID)
+# @name rentCar
 POST {{baseUrl}}/api/rentals/rent
 Content-Type: {{contentType}}
 
@@ -119,9 +99,8 @@ Content-Type: {{contentType}}
   "carId": "{{carId}}",
   "days": 5
 }
-
-@rentalId = {{$response.body.data.id}}
-
+###
+@rentalId = {{rentCar.response.body.rentalId}}
 ###
 
 ### 12. Alquilar otro coche por más días
@@ -133,19 +112,16 @@ Content-Type: {{contentType}}
   "carId": "{{carId}}",
   "days": 10
 }
-
 ###
 
 ### 13. Obtener detalles de un alquiler
 GET {{baseUrl}}/api/rentals/{{rentalId}}
 Accept: {{contentType}}
-
 ###
 
 ### 14. Obtener alquileres de un cliente
 GET {{baseUrl}}/api/rentals/customer/{{customerId}}
 Accept: {{contentType}}
-
 ###
 
 ### 15. Devolver un coche
@@ -156,7 +132,6 @@ Content-Type: {{contentType}}
   "rentalId": "{{rentalId}}",
   "actualReturnDate": "2026-01-20"
 }
-
 ###
 
 ### 16. Alquilar coche con cliente inexistente (error esperado 404)
@@ -168,7 +143,6 @@ Content-Type: {{contentType}}
   "carId": "{{carId}}",
   "days": 5
 }
-
 ###
 
 ### 17. Alquilar coche con ID inválido (error esperado 404)
@@ -180,7 +154,6 @@ Content-Type: {{contentType}}
   "carId": "invalid-car-id",
   "days": 5
 }
-
 ###
 
 ### 18. Alquilar con días inválidos (error esperado 400)
@@ -192,39 +165,35 @@ Content-Type: {{contentType}}
   "carId": "{{carId}}",
   "days": 0
 }
-
 ###
 
 ### 19. Obtener detalles de alquiler inexistente (error esperado 404)
 GET {{baseUrl}}/api/rentals/non-existent-rental
 Accept: {{contentType}}
-
 ###
 
 # ==========================================
 # CUSTOMER ENDPOINTS - GESTIÓN DE CLIENTES
 # ==========================================
 
-### 20. Crear un nuevo cliente (CAPTURA EL CUSTOMER ID)
+### 20. Crear un nuevo cliente
+# @name createCustomer
 POST {{baseUrl}}/api/customers
 Content-Type: {{contentType}}
 
 {
   "name": "Juan Pérez"
 }
-
-@customerId = {{$response.body.data.id}}
-
+###
+@customerId = {{createCustomer.response.body.id}}
 ###
 
 ### 21. Obtener puntos de lealtad de un cliente
 GET {{baseUrl}}/api/customers/{{customerId}}/loyalty-points
 Accept: {{contentType}}
-
 ###
 
 ### 22. Obtener puntos de lealtad con cliente inexistente (error esperado 404)
 GET {{baseUrl}}/api/customers/non-existent-customer/loyalty-points
 Accept: {{contentType}}
-
 ###

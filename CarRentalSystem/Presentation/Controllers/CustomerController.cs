@@ -10,7 +10,7 @@ namespace CarRentalSystem.Presentation.Controllers;
 /// Controlador para gestionar operaciones relacionadas con clientes.
 /// </summary>
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/customers")]
 public class CustomerController : ControllerBase
 {
     private readonly ICreateCustomerUseCase _createCustomerUseCase;
