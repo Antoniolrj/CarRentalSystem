@@ -2,7 +2,7 @@ namespace CarRentalSystem.Application.UseCases.GetCars;
 
 using CarRentalSystem.Application.DTOs;
 using CarRentalSystem.Application.Results;
-using CarRentalSystem.Core.Interfaces;
+using CarRentalSystem.Domain.Interfaces;
 
 /// <summary>
 /// Caso de uso de obtener todos los coches.

@@ -3,8 +3,8 @@ namespace CarRentalSystem.Application.UseCases.RentCar;
 using CarRentalSystem.Application.DTOs;
 using CarRentalSystem.Application.Errors;
 using CarRentalSystem.Application.Results;
-using CarRentalSystem.Core.Entities;
-using CarRentalSystem.Core.Interfaces;
+using CarRentalSystem.Domain.Entities;
+using CarRentalSystem.Domain.Interfaces;
 
 /// <summary>
 /// Implementación del caso de uso de alquiler de coches.

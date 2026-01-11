@@ -1,16 +1,17 @@
+namespace CarRentalSystem.Tests.UseCases;
+
 using System.Threading;
 using System.Threading.Tasks;
 using CarRentalSystem.Application.DTOs;
 using CarRentalSystem.Application.Errors;
 using CarRentalSystem.Application.UseCases.RentCar;
-using CarRentalSystem.Core.Entities;
-using CarRentalSystem.Core.Interfaces;
-using CarRentalSystem.Core.ValueObjects;
+using CarRentalSystem.Domain.Entities;
+using CarRentalSystem.Domain.Interfaces;
+using CarRentalSystem.Domain.ValueObjects;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
 
-namespace CarRentalSystem.Tests.UseCases;
 
 /// <summary>
 /// Tests unitarios para RentCarUseCase.

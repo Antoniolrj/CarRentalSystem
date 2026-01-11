@@ -1,6 +1,6 @@
-namespace CarRentalSystem.Core.Interfaces;
+namespace CarRentalSystem.Domain.Interfaces;
 
-using CarRentalSystem.Core.Entities;
+using CarRentalSystem.Domain.Entities;
 
 /// <summary>
 /// Interfaz del repositorio para acceso a datos de alquileres.

@@ -1,3 +1,5 @@
+namespace CarRentalSystem.Tests.Controllers;
+
 using System.Threading;
 using System.Threading.Tasks;
 using CarRentalSystem.Application.DTOs;
@@ -9,8 +11,6 @@ using FluentAssertions;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using NUnit.Framework;
-
-namespace CarRentalSystem.Tests.Controllers;
 
 /// <summary>
 /// Tests unitarios para CustomerController.

@@ -2,8 +2,8 @@ namespace CarRentalSystem.Application.UseCases.CreateCar;
 
 using CarRentalSystem.Application.DTOs;
 using CarRentalSystem.Application.Results;
-using CarRentalSystem.Core.Entities;
-using CarRentalSystem.Core.Interfaces;
+using CarRentalSystem.Domain.Entities;
+using CarRentalSystem.Domain.Interfaces;
 
 /// <summary>
 /// Caso de uso para crear un nuevo coche.

@@ -1,14 +1,15 @@
+namespace CarRentalSystem.Tests.UseCases;
+
 using System.Threading;
 using System.Threading.Tasks;
 using CarRentalSystem.Application.DTOs;
 using CarRentalSystem.Application.UseCases.CreateCar;
-using CarRentalSystem.Core.Entities;
-using CarRentalSystem.Core.Interfaces;
+using CarRentalSystem.Domain.Entities;
+using CarRentalSystem.Domain.Interfaces;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
 
-namespace CarRentalSystem.Tests.UseCases;
 
 /// <summary>
 /// Tests unitarios para CreateCarUseCase.

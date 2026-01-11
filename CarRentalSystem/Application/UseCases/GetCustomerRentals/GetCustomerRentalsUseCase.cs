@@ -3,7 +3,7 @@ namespace CarRentalSystem.Application.UseCases.GetCustomerRentals;
 using CarRentalSystem.Application.DTOs;
 using CarRentalSystem.Application.Errors;
 using CarRentalSystem.Application.Results;
-using CarRentalSystem.Core.Interfaces;
+using CarRentalSystem.Domain.Interfaces;
 
 /// <summary>
 /// Implementación del caso de uso de obtener alquileres de un cliente.

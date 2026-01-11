@@ -1,8 +1,8 @@
 namespace CarRentalSystem.Application.Services;
 
-using CarRentalSystem.Core.Entities;
-using CarRentalSystem.Core.Interfaces;
-using CarRentalSystem.Core.ValueObjects;
+using CarRentalSystem.Domain.Entities;
+using CarRentalSystem.Domain.Interfaces;
+using CarRentalSystem.Domain.ValueObjects;
 
 /// <summary>
 /// Implementación del servicio de dominio de precios.

@@ -5,8 +5,6 @@ using CarRentalSystem.Application.Results;
 
 /// <summary>
 /// Interfaz para el caso de uso de obtener detalles de un alquiler.
-/// Responsabilidad: Encapsular toda la lógica de obtención de alquiler.
-/// Principio SOLID - ISP: Interfaz específica para este caso de uso.
 /// </summary>
 public interface IGetRentalUseCase
 {

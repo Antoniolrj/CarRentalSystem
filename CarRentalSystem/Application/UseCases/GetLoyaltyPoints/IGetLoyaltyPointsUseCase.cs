@@ -5,8 +5,6 @@ using CarRentalSystem.Application.Results;
 
 /// <summary>
 /// Interfaz para el caso de uso de obtener puntos de lealtad.
-/// Responsabilidad: Encapsular toda la lógica de obtención de puntos de lealtad.
-/// Principio SOLID - ISP: Interfaz específica para este caso de uso.
 /// </summary>
 public interface IGetLoyaltyPointsUseCase
 {

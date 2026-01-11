@@ -1,11 +1,10 @@
-namespace CarRentalSystem.Core.Interfaces;
+namespace CarRentalSystem.Domain.Interfaces;
 
-using CarRentalSystem.Core.Entities;
-using CarRentalSystem.Core.ValueObjects;
+using CarRentalSystem.Domain.Entities;
+using CarRentalSystem.Domain.ValueObjects;
 
 /// <summary>
 /// Servicio de dominio para cálculos de precios.
-/// Principio SOLID - SRP: Responsabilidad única de calcular precios según reglas de negocio.
 /// </summary>
 public interface IPricingDomainService
 {

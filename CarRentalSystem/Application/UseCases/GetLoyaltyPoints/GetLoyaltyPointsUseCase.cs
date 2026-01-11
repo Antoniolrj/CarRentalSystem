@@ -3,7 +3,7 @@ namespace CarRentalSystem.Application.UseCases.GetLoyaltyPoints;
 using CarRentalSystem.Application.DTOs;
 using CarRentalSystem.Application.Errors;
 using CarRentalSystem.Application.Results;
-using CarRentalSystem.Core.Interfaces;
+using CarRentalSystem.Domain.Interfaces;
 
 /// <summary>
 /// Implementación del caso de uso para obtener loyalty points de un cliente.

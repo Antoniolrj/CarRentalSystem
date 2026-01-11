@@ -1,7 +1,7 @@
 namespace CarRentalSystem.Infrastructure.Persistence;
 
 using Microsoft.EntityFrameworkCore;
-using CarRentalSystem.Core.Entities;
+using CarRentalSystem.Domain.Entities;
 
 /// <summary>
 /// DbContext para Car Rental System. Aquí configuramos las entidades y sus relaciones con la base de datos.

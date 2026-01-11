@@ -5,8 +5,6 @@ using CarRentalSystem.Application.Results;
 
 /// <summary>
 /// Interfaz para el caso de uso de obtener autos disponibles.
-/// Responsabilidad: Encapsular toda la lógica de obtención de autos disponibles.
-/// Principio SOLID - ISP: Interfaz específica para este caso de uso.
 /// </summary>
 public interface IGetAvailableCarsUseCase
 {

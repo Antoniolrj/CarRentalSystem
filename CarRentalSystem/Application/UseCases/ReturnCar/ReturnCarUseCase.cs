@@ -3,7 +3,7 @@ namespace CarRentalSystem.Application.UseCases.ReturnCar;
 using CarRentalSystem.Application.DTOs;
 using CarRentalSystem.Application.Errors;
 using CarRentalSystem.Application.Results;
-using CarRentalSystem.Core.Interfaces;
+using CarRentalSystem.Domain.Interfaces;
 
 /// <summary>
 /// Implementación del caso de uso de devolución de coches.

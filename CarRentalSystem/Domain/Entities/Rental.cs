@@ -1,12 +1,7 @@
-namespace CarRentalSystem.Core.Entities;
+namespace CarRentalSystem.Domain.Entities;
 
 /// <summary>
 /// Entidad de dominio: Alquiler
-/// Responsabilidad única: Representar y gestionar el ciclo de vida de un alquiler.
-/// Invariantes del dominio:
-/// - Una vez creado un alquiler, sus características no pueden cambiar
-/// - Un alquiler puede transicionar de activo a devuelto
-/// - Las fechas de devolución no pueden ser antes de la fecha de alquiler
 /// </summary>
 public sealed class Rental
 {

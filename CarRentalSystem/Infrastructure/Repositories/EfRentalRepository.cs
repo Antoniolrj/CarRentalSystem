@@ -1,13 +1,12 @@
 namespace CarRentalSystem.Infrastructure.Repositories;
 
 using Microsoft.EntityFrameworkCore;
-using CarRentalSystem.Core.Entities;
-using CarRentalSystem.Core.Interfaces;
+using CarRentalSystem.Domain.Entities;
+using CarRentalSystem.Domain.Interfaces;
 using CarRentalSystem.Infrastructure.Persistence;
 
 /// <summary>
 /// Implementación de IRentalRepository usando Entity Framework Core.
-/// Responsabilidad: Acceder y persistir alquileres en la base de datos.
 /// </summary>
 public class EfRentalRepository : IRentalRepository
 {

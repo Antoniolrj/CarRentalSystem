@@ -1,6 +1,6 @@
 namespace CarRentalSystem.Application.DTOs;
 
-using CarRentalSystem.Core.Entities;
+using CarRentalSystem.Domain.Entities;
 using System.ComponentModel.DataAnnotations;
 
 

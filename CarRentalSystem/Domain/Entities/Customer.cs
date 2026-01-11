@@ -1,4 +1,4 @@
-namespace CarRentalSystem.Core.Entities;
+namespace CarRentalSystem.Domain.Entities;
 
 /// <summary>
 /// Entidad de dominio: Cliente

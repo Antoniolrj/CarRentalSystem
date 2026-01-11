@@ -1,4 +1,4 @@
-namespace CarRentalSystem.Core.Entities;
+namespace CarRentalSystem.Domain.Entities;
 
 /// <summary>
 /// Enumeración de tipos de vehículos.

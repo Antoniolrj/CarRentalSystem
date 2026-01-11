@@ -11,7 +11,7 @@ using CarRentalSystem.Application.UseCases.GetRental;
 using CarRentalSystem.Application.UseCases.GetCustomerRentals;
 using CarRentalSystem.Application.UseCases.CreateCar;
 using CarRentalSystem.Application.UseCases.CreateCustomer;
-using CarRentalSystem.Core.Interfaces;
+using CarRentalSystem.Domain.Interfaces;
 using CarRentalSystem.Infrastructure.Repositories;
 using CarRentalSystem.Infrastructure.Persistence;
 using Microsoft.Extensions.DependencyInjection;

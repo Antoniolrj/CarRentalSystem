@@ -2,8 +2,8 @@ namespace CarRentalSystem.Application.UseCases.CreateCustomer;
 
 using CarRentalSystem.Application.DTOs;
 using CarRentalSystem.Application.Results;
-using CarRentalSystem.Core.Entities;
-using CarRentalSystem.Core.Interfaces;
+using CarRentalSystem.Domain.Entities;
+using CarRentalSystem.Domain.Interfaces;
 
 /// <summary>
 /// Implementación del caso de uso de crear un nuevo cliente.

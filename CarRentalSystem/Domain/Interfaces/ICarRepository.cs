@@ -1,10 +1,9 @@
-namespace CarRentalSystem.Core.Interfaces;
+namespace CarRentalSystem.Domain.Interfaces;
 
-using CarRentalSystem.Core.Entities;
+using CarRentalSystem.Domain.Entities;
 
 /// <summary>
-/// Interfaz del repositorio para acceso a datos de autos.
-/// Principio SOLID - DIP: El dominio depende de abstracciones, no de implementaciones concretas.
+/// Interfaz del repositorio para acceso a datos de coches.
 /// </summary>
 public interface ICarRepository
 {
@@ -20,7 +19,6 @@ public interface ICarRepository
 
     /// <summary>
     /// Obtiene solo los autos disponibles.
-    /// Principio: Separación de consultas complejas en el repositorio.
     /// </summary>
     Task<IEnumerable<Car>> GetAvailableAsync(CancellationToken cancellationToken = default);
 

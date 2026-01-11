@@ -1,4 +1,4 @@
-namespace CarRentalSystem.Core.ValueObjects;
+namespace CarRentalSystem.Domain.ValueObjects;
 
 /// <summary>
 /// Value Object para representar dinero de forma segura y explícita.
